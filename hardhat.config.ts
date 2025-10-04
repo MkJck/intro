@@ -26,6 +26,14 @@ const config: HardhatUserConfig = {
       type: "edr-simulated",
       chainType: "l1",
     },
+    eth: {
+    type: "edr-simulated",
+    chainType: "l1",
+    forking: {
+      url: configVariable("ETHEREUM_RPC_URL"),
+      blockNumber: 23499693,
+    },
+  },
     hardhatOp: {
       type: "edr-simulated",
       chainType: "op",
